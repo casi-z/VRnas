@@ -1,0 +1,83 @@
+{
+    "path": "components",
+    "onPrefix": {
+        "default": {
+            "files": [
+                {
+                    "name": "#{componentName}.tsx",
+                    "text": [
+                        "import * as S from './#{componentName}.style'",
+                        "import { ReactChild, FC } from 'react'",
+                        "import { Box } from '@mui/material'",
+                        "",
+                        "const { log } = console",
+                        "",
+                        "interface #{componentName}Props {",
+                        "   ",
+                        "   children?: ReactChild,",
+                        "   ",
+                        "}",
+                        "",
+                        "const #{componentName}: FC<#{componentName}Props> = ({ children }) => {",
+                        "",
+                        "    return(",
+                        "      <S._#{componentName} className=\"#{componentName}\">",
+                        "         ",
+                        "      </S._#{componentName}>",
+                        "    )",
+                        "}",
+                        "export default #{componentName}"
+                    ]
+                },
+                {
+                    "name": "#{componentName}.style.tsx",
+                    "text": [
+                        "import { Box, styled } from '@mui/material'",
+                        "",
+                        "export const _#{componentName} = styled(Box)(`",
+                        "",
+                        "    //Write your styles here",
+                        "",
+                        "`)"
+                    ]
+                }
+            ]
+        },
+        "small": {
+            "files": [
+                {
+                    "name": "#{componentName}.tsx",
+                    "text": [
+                        "import * as S from './#{componentName}.style'",
+                        "import { ReactChild, FC } from 'react'",
+                        "import { Box } from '@mui/material'",
+                        "",
+                        "const { log } = console",
+                        "",
+                        "interface #{componentName}Props {",
+                        "   ",
+                        "   children?: ReactChild,",
+                        "   ",
+                        "}",
+                        "",
+                        "const _#{componentName} = styled(Box)(`",
+                        "",
+                        "    //Write your styles here",
+                        "",
+                        "`)",
+                        "",
+                        "const #{componentName}: FC<#{componentName}Props> = ({ children }) => {",
+                        "",
+                        "    return(",
+                        "       <div className=\"#{componentName}\">",
+                        "          ",
+                        "       </div>",
+                        "    )",
+                        "}",
+                        "export default #{componentName}"
+                    ]
+                }
+            ]
+        }
+    }
+}
